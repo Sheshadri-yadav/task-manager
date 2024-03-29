@@ -6,7 +6,8 @@
     <link rel="stylesheet" href="/static/edit_tasks.css">
 </head>
 <body>
-  <div class="navbar">
+
+      <div class="navbar">
         <div class="container">
             <h1>Navigation Bar</h1>
            <ul class="nav">
@@ -14,17 +15,14 @@
     <a class="nav-link active" aria-current="page" href="/all_tasks">All Tasks </a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="#">Add New Task</a>
+    <a class="nav-link" href="/add_new_tasks">Add New Task</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="#">Link</a>
+    <a class="nav-link" href="/edit_tasks">Edit tasks</a>
   </li>
-  <li class="nav-item">
-    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-  </li>
+
 </ul>
         </div>
-    </div>
     <div class="container">
         <h1>All Tasks</h1>
         <table>
@@ -54,12 +52,13 @@
                     </td>
                     <td>
 
-                      <button onclick="deleteTask({{ task.task_id }})">Mark as Completed</button>
+                      <button onclick="deleteTask({{ task.task_id }})">Delete Task</button>
                 </tr>
                 {% endfor %}
             </tbody>
         </table>
     </div>
+      </div>
 <script src="static/edit_tasks.js"></script>
 </body>
 </html>

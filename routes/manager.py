@@ -51,6 +51,7 @@ async def new_task(request: Request):
         print("hello")
         insert_query(task_title, task_desc, due_date, due_time, False)
         # Perform database insertion or any other operations here
+        return {"success"}
 
     except Exception as e:
         print(f"Error occurred during insertion: {e}")
