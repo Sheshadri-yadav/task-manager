@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Task</title>
+    <link rel="stylesheet" href="static/add_tasks.css">
+</head>
+<body>
+
+      <div class="navbar">
+        <div class="container">
+            <h1>Navigation Bar</h1>
+           <ul class="nav">
+  <li class="nav-item">
+    <a class="nav-link active" aria-current="page" href="/all_tasks">All Tasks </a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Add New Task</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Link</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+  </li>
+</ul>
+        </div>
+    </div>
+    <div class="container">
+        <h1>Add New Task</h1>
+                <form id="task-form" action="/add_new_task" method="post">
+            <label for="task_title">Task Title:</label>
+            <input type="text" id="task_title" name="task_title" required>
+
+            <label for="task_desc">Task Description:</label>
+            <textarea id="task_desc" name="task_desc" required></textarea>
+
+            <label for="due_date">Due Date:</label>
+            <input type="date" id="due_date" name="due_date" required>
+
+            <label for="due_time">Due Time:</label>
+            <input type="time" id="due_time" name="due_time" required>
+
+            <button type="submit">Add Task</button>
+        </form>
+
+    </div>
+
+</body>
+
+</html>
