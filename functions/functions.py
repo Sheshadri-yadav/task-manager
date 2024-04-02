@@ -100,19 +100,3 @@ def delete_task(task_id: int):
         connection.commit()
 
 
-def seconds_to_time(seconds):
-    # Ensure input is converted to an integer
-    seconds = int(seconds)
-
-    # Calculate hours, minutes, and seconds
-    hours = seconds // 3600
-    minutes = (seconds % 3600) // 60
-    remaining_seconds = seconds % 60
-
-    # Format the time
-    formatted_time = "{:02d}:{:02d}:{:02d}".format(hours, minutes, remaining_seconds)
-
-    return formatted_time
-
-
-print(seconds_to_time(52500))
